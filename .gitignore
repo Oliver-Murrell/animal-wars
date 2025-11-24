@@ -1,2 +1,29 @@
 node_modules
 
+# TypeScript build output
+dist
+build
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode
+.idea
+
+# Jest coverage
+coverage
+
+# Environment files
+.env
+.env.*
+
