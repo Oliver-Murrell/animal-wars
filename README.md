@@ -1,38 +1,79 @@
-# tiny-wars
+# Tiny Wars (Animal Wars)
 
-## Notes:
+A TypeScript simulation where various animals battle until only one remains. Each animal has unique health and attack stats. The simulation runs automatically, pitting animals against each other in a tournament-style elimination until a single winner is left.
 
-1. Functions do not belong in types.ts file. types.ts should only contain types, E.g. `type Animal = {}`
-2. Variables are defined like this `const fighters = ['Dave', 'Mark']`
-3. Functions are defined like this
+## Features
+
+- Randomly generates a population of animals (Lion, Bear, Dog, Eagle, Monkey, Crocodile)
+- Each animal has unique health and attack strength
+- Animals are selected in pairs to fight until only one remains
+- Fight logic simulates turn-based attacks until one animal is defeated
+- Console output shows progress and the final winner
+
+## Project Structure
+
 ```
-const getFighters = () => {
-    return ['Jeff', 'Fred']
-}
-```
-4. Objects are defined with key value pairs, key on the left and value on the right. Similar to this
-```
-{
-    name: 'Oliver',
-    type: 'Lion',
-    health: 500,
-    maxAttackStrength: 22,
-    isAlive: true
-}
+├── src/
+│   ├── animalFactory.ts   # Animal creation logic
+│   ├── animals.ts         # Population generation
+│   ├── battle.ts          # Fighter selection and attack calculation
+│   ├── fight.ts           # Fight simulation logic
+│   ├── types.ts           # Type definitions
+│   ├── main.ts            # Entry point for simulation
+│   ├── index.ts           # Example utility (sum)
+│   └── index.test.ts      # Example tests
+├── package.json           # Project metadata and scripts
+├── tsconfig.json          # TypeScript configuration
+├── jest.config.js         # Jest configuration
 ```
 
-#### Run a specific file
-`npx ts-node <file path>`
+## Getting Started
 
+### Prerequisites
 
-#### Creating a Pull Request / Pushing to GitHub
-1. Create a branch
+- Node.js (v18+ recommended)
+- npm
+
+### Installation
+
+```bash
+npm install
 ```
-    git checkout -b "<name>"
+
+### Running the Simulation
+
+```bash
+npm start
 ```
-2. Make code changes.
-3. Open source control on the left hand menu.
-4. Stage files using the + symbol.
-5. Write a comment explaining the changes.
-6. Run commit and push button.
-7. Go to GitHub and "Compare and Pull Request"
+
+This will run the simulation and print progress and the winner to the console.
+
+### Running Tests
+
+```bash
+npm test
+```
+
+## How It Works
+
+- `main.ts` generates a population of animals and runs the main simulation loop.
+- Each iteration, two animals are selected to fight (`selectTwoFighters`).
+- The `fight` function simulates a turn-based battle until one animal is defeated.
+- The winner is returned to the population; the process repeats until one animal remains.
+
+## Customization
+
+- To change animal stats, edit `src/animalFactory.ts`.
+- To adjust population size or simulation duration, modify the values in `src/main.ts`.
+
+## License
+
+ISC
+
+## Author
+
+Oliver Murrell
+
+## Issues
+
+For bugs or feature requests, please use the [GitHub Issues](https://github.com/Oliver-Murrell/animal-wars/issues).
