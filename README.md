@@ -1,6 +1,6 @@
-# Tiny Wars (Animal Wars)
+# Animal Wars
 
-A TypeScript simulation where various animals battle until only one remains. Each animal has unique health and attack stats. The simulation runs automatically, pitting animals against each other in a tournament-style elimination until a single winner is left.
+A TypeScript simulation where various animals battle until only one remains. Each animal has unique health and attack stats. The simulation runs automatically, putting animals against each other in a tournament-style elimination until a single winner is left.
 
 ## Features
 
