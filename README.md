@@ -1,7 +1,6 @@
 # Animal Wars
 
-A TypeScript simulation where various animals battle in a tournament-style
-elimination until only one remains. Built to practice TypeScript, OOP patterns, and game simulation logic.
+A TypeScript simulation where various animals battle until only one remains. Each animal has unique health and attack stats. The simulation runs automatically, pitting animals against each other in a tournament-style elimination until a single winner is left.
 
 ## Features
 
