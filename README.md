@@ -1,6 +1,7 @@
-# Tiny Wars (Animal Wars)
+# Animal Wars
 
-A TypeScript simulation where various animals battle until only one remains. Each animal has unique health and attack stats. The simulation runs automatically, pitting animals against each other in a tournament-style elimination until a single winner is left.
+A TypeScript simulation where various animals battle in a tournament-style
+elimination until only one remains. Built to practice TypeScript, OOP patterns, and game simulation logic.
 
 ## Features
 
@@ -48,10 +49,32 @@ npm start
 
 This will run the simulation and print progress and the winner to the console.
 
+#### Example Run (truncated)
+
+```text
+npm start
+iteration: 0
+population count: 50000
+Bear (1000 hp) vs Dog (200 hp) -> Dog wins with 120 hp
+iteration: 1
+population count: 49999
+Lion (500 hp) vs Eagle (300 hp) -> Lion wins with 260 hp
+iteration: 2
+population count: 49998
+...
+Crocodile has won!, with 540 health
+```
+
 ### Running Tests
 
 ```bash
 npm test
+```
+
+Coverage (optional):
+
+```bash
+npm test -- --coverage
 ```
 
 ## How It Works
@@ -63,12 +86,9 @@ npm test
 
 ## Customization
 
-- To change animal stats, edit `src/animalFactory.ts`.
-- To adjust population size or simulation duration, modify the values in `src/main.ts`.
-
-## License
-
-ISC
+- Population size and loop duration: tweak `generateAnimals(50000)` and `duration` in `src/main.ts`.
+- Animal balance: adjust `health` and `maxAttackStrength` values per species in `src/animalFactory.ts`.
+- Logging output: remove or change the `console.log` calls in `src/main.ts` if you want quieter runs.
 
 ## Author
 
